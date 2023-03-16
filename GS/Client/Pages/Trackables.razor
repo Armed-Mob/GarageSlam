@@ -1,11 +1,49 @@
 ﻿@page "/trackables"
 @inject NavigationManager NavigationManager
+@inject HttpClient Http
 
-<div class="MainDivMargin" style="text-align:center;">
+<div>
     <h1>Trackables</h1>
 </div>
 
+<SfGrid DataSource="GridData" AllowFiltering="true" Toolbar="@(new List<string>() { "Search" })">
+    <GridFilterSettings Type="FilterType.CheckBox"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Width="60">
+            <Template>
+                @{
+                    var trackable = context as Trackable;
+                    <SfButton CssClass="e-inherit" IconCss="e-icons e-edit"
+                        OnClick="(() => EditTrackable(trackable!.Id))"></SfButton>
+                }
+            </Template>
+        </GridColumn>
+        <GridColumn Field="InternalIdentifier" HeaderText="Internal Id"></GridColumn>
+        <GridColumn Field="ManufacturerIdentifier" HeaderText="Manufacturer Id"></GridColumn>
+        <GridColumn Field="TrackableColor" HeaderText="Color"></GridColumn>
+        <GridColumn Field="TrackableYear" HeaderText="Year"></GridColumn>
+        <GridColumn Field="TrackableMake" HeaderText="Make"></GridColumn>
+        <GridColumn Field="TrackableModel" HeaderText="Model"></GridColumn>
+        <GridColumn Field="TrackableTrimLevel" HeaderText="Trim Level"></GridColumn>
+        <GridColumn Field="RegistrationExpiry" HeaderText="Registration Expiry" Format="MM-yyyy"></GridColumn>
+        <GridColumn Field="InsuranceExpiry" HeaderText="Insurance Expiry" Format="MM-yyyy"></GridColumn>
+    </GridColumns>
+</SfGrid>
 
 @code {
+    public List<Trackable> GridData { get; set; } = new List<Trackable>();
 
+    protected override async Task OnInitializedAsync()
+    {
+        var result = await Http.GetFromJsonAsync<List<Trackables>>("api/trackables");
+        if (result is not null)
+        {
+            GridData = result;
+        }
+    }
+
+    void EditTrackable(int id)
+    {
+        NavigationManager.NavigateTo($"trackables/edit/{id}");
+    }
 }

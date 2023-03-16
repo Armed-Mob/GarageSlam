@@ -1,16 +1,22 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: Roboto, Arial, Arial, Helvetica, sans-serif, sans-serif;
+}
+
+main {
+    margin-left: 2em;
+    margin-top: 2em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+
 }
 
 h1:focus {
     outline: none;
 }
 
-.MainDivMargin {
-    margin-top:2em;
-    margin-left:2em;
-}
+
 
 #blazor-error-ui {
     background: lightyellow;
@@ -40,3 +46,6 @@ h1:focus {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+
+
