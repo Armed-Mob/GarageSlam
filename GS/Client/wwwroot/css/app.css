@@ -1,5 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 h1:focus {
     outline: none;
+}
+
+.MainDivMargin {
+    margin-top:2em;
+    margin-left:2em;
 }
 
 #blazor-error-ui {

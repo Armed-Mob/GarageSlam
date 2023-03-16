@@ -13,6 +13,6 @@ builder.Services.AddHttpClient("GS.ServerAPI", client => client.BaseAddress = ne
 builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("GS.ServerAPI"));
 builder.Services.AddSyncfusionBlazor();
 
-Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(builder.Configuration.GetConnectionString("LicenseKey"));
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTM0ODkxNUAzMjMwMmUzNDJlMzBURExsWHFQbkdSUW5iS0JYNjhlbE1UemxGNFUrVjNIWkpHb3ZVUGhkTWVBPQ==");
 
 await builder.Build().RunAsync();

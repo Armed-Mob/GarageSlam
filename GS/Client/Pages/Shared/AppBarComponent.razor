@@ -1,0 +1,54 @@
+﻿@using Syncfusion.Blazor.Navigations
+@inject NavigationManager NavigationManager
+
+<div class="control-container">
+    <SfAppBar ColorMode="AppBarColor.Dark" style="padding-left:5em; padding-right:5em;">
+        <SfButton CssClass="e-inherit" IconCss="e-icons e-menu" OnClick="NavHome"></SfButton>
+        <span class="regular">GarageSlam</span>
+        <AppBarSpacer></AppBarSpacer>
+        <SfButton CssClass="e-inherit" Content="Trackables" OnClick="NavTrackable"></SfButton>
+        <SfButton CssClass="e-inherit" Content="Work Orders" OnClick="NavWorkOrder"></SfButton>
+        <SfButton CssClass="e-inherit" Content="Notes" OnClick="NavNote"></SfButton>
+        <AppBarSpacer></AppBarSpacer>
+        <SfButton CssClass="e-inherit" Content="Register" OnClick="NavRegister"></SfButton>
+        <SfButton CssClass="e-inherit" Content="Log In" OnClick="NavLogin"></SfButton>
+    </SfAppBar>
+</div>
+
+<style>
+    .control-container .e-btn.e-inherit {
+        margin: 0 3px;
+    }
+</style>
+
+@code {
+    void NavHome()
+    {
+        NavigationManager.NavigateTo($"/");
+    }
+
+    void NavTrackable()
+    {
+        NavigationManager.NavigateTo($"trackables");
+    }
+
+    void NavWorkOrder()
+    {
+        NavigationManager.NavigateTo($"workorders");
+    }
+
+    void NavNote()
+    {
+        NavigationManager.NavigateTo($"notes");
+    }
+
+    void NavRegister()
+    {
+        NavigationManager.NavigateTo($"register");
+    }
+
+    void NavLogin()
+    {
+        NavigationManager.NavigateTo($"login");
+    }
+}
