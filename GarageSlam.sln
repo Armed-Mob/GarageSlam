@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33417.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GS.Server", "GS\Server\GS.Server.csproj", "{A12FDD85-EA0A-470B-A941-BE5434B1A6A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GS.Client", "GS\Client\GS.Client.csproj", "{6D140C8F-6F74-49E6-BB7D-0A9D3E4B233E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GS.Shared", "GS\Shared\GS.Shared.csproj", "{E632D878-4CEF-4B0F-9C1C-5731C578668A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A12FDD85-EA0A-470B-A941-BE5434B1A6A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A12FDD85-EA0A-470B-A941-BE5434B1A6A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A12FDD85-EA0A-470B-A941-BE5434B1A6A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A12FDD85-EA0A-470B-A941-BE5434B1A6A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D140C8F-6F74-49E6-BB7D-0A9D3E4B233E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D140C8F-6F74-49E6-BB7D-0A9D3E4B233E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D140C8F-6F74-49E6-BB7D-0A9D3E4B233E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D140C8F-6F74-49E6-BB7D-0A9D3E4B233E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E632D878-4CEF-4B0F-9C1C-5731C578668A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E632D878-4CEF-4B0F-9C1C-5731C578668A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E632D878-4CEF-4B0F-9C1C-5731C578668A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E632D878-4CEF-4B0F-9C1C-5731C578668A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA61B893-8F15-40C9-86BF-F388C5ECD6F6}
+	EndGlobalSection
+EndGlobal
